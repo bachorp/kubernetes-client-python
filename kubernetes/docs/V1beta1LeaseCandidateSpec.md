@@ -1,7 +1,9 @@
 # V1beta1LeaseCandidateSpec
 
 LeaseCandidateSpec is a specification of a Lease.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **binary_version** | **str** | BinaryVersion is the binary version. It must be in a semver format without leading &#x60;v&#x60;. This field is required. | 
@@ -11,6 +13,23 @@ Name | Type | Description | Notes
 **renew_time** | **datetime** | RenewTime is the time that the LeaseCandidate was last updated. Any time a Lease needs to do leader election, the PingTime field is updated to signal to the LeaseCandidate that they should update the RenewTime. Old LeaseCandidate objects are also garbage collected if it has been hours since the last renew. The PingTime field is updated regularly to prevent garbage collection for still active LeaseCandidates. | [optional] 
 **strategy** | **str** | Strategy is the strategy that coordinated leader election will use for picking the leader. If multiple candidates for the same Lease return different strategies, the strategy provided by the candidate with the latest BinaryVersion will be used. If there is still conflict, this is a user error and coordinated leader election will not operate the Lease until resolved. | 
 
+## Example
+
+```python
+from kubernetes.client.models.v1beta1_lease_candidate_spec import V1beta1LeaseCandidateSpec
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of V1beta1LeaseCandidateSpec from a JSON string
+v1beta1_lease_candidate_spec_instance = V1beta1LeaseCandidateSpec.from_json(json)
+# print the JSON string representation of the object
+print(V1beta1LeaseCandidateSpec.to_json())
+
+# convert the object into a dict
+v1beta1_lease_candidate_spec_dict = v1beta1_lease_candidate_spec_instance.to_dict()
+# create an instance of V1beta1LeaseCandidateSpec from a dict
+v1beta1_lease_candidate_spec_from_dict = V1beta1LeaseCandidateSpec.from_dict(v1beta1_lease_candidate_spec_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
