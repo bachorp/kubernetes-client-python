@@ -51,7 +51,7 @@ fi;
 
 echo "Adding custom tests"
 mkdir -p "$SCRIPT_ROOT/../kubernetes/client/test"
-cp "$SCRIPT_ROOT/test_api_client.py" "$SCRIPT_ROOT/../kubernetes/client/test/"
+cp "$SCRIPT_ROOT/test_api_client" "$SCRIPT_ROOT/../kubernetes/client/test/test_api_client.py"
 
 
 git commit -m "Apply hotfixes"
