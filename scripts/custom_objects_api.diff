@@ -1,0 +1,102 @@
+diff --git a/kubernetes/client/api/custom_objects_api.py b/kubernetes/client/api/custom_objects_api.py
+index c2ea8f96e..3c57c0205 100644
+--- a/kubernetes/client/api/custom_objects_api.py
++++ b/kubernetes/client/api/custom_objects_api.py
+@@ -6430,14 +6430,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+ 
+@@ -6838,14 +6831,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+ 
+@@ -7246,14 +7232,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+ 
+@@ -7667,14 +7646,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+ 
+@@ -8090,15 +8062,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json', 
+-                        'application/apply-patch+yaml'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+ 
+@@ -8514,15 +8478,7 @@ class CustomObjectsApi:
+         if _content_type:
+             _header_params['Content-Type'] = _content_type
+         else:
+-            _default_content_type = (
+-                self.api_client.select_header_content_type(
+-                    [
+-                        'application/json-patch+json', 
+-                        'application/merge-patch+json', 
+-                        'application/apply-patch+yaml'
+-                    ]
+-                )
+-            )
++            _default_content_type = 'application/merge-patch+json'
+             if _default_content_type is not None:
+                 _header_params['Content-Type'] = _default_content_type
+

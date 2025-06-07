@@ -1,0 +1,12 @@
+services:
+  build-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+      - make
+      - -C
+      - /work/doc
+      - rst
+    volumes: 
+      - ./:/work
